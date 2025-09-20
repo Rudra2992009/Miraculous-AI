@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Simple Calculator</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="calculator">
+    <input id="display" class="display" type="text" inputmode="decimal" aria-label="Calculator display" disabled />
+    <div class="buttons">
+      <button data-action="digit">7</button>
+      <button data-action="digit">8</button>
+      <button data-action="digit">9</button>
+      <button data-action="operator">/</button>
+
+      <button data-action="digit">4</button>
+      <button data-action="digit">5</button>
+      <button data-action="digit">6</button>
+      <button data-action="operator">*</button>
+
+      <button data-action="digit">1</button>
+      <button data-action="digit">2</button>
+      <button data-action="digit">3</button>
+      <button data-action="operator">-</button>
+
+      <button data-action="digit">0</button>
+      <button data-action="decimal">.</button>
+      <button class="equal" data-action="equals">=</button>
+      <button data-action="operator">+</button>
+
+      <button class="wide clear" data-action="clear">C</button>
+      <button class="wide back" data-action="backspace">←</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
