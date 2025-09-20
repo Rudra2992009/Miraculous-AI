@@ -1,0 +1,77 @@
+:root{
+  --bg:#f4f6f8;
+  --panel:#ffffff;
+  --accent:#6fa8dc;
+  --operator:#ffd966;
+  --danger:#e06666;
+  --btn:#f0f0f0;
+  --shadow: 0 6px 18px rgba(20,20,20,0.08);
+  --radius:12px;
+}
+
+*{box-sizing:border-box;font-family:Inter,Segoe UI,Roboto,system-ui,-apple-system,"Helvetica Neue",Arial}
+
+html,body{
+  height:100%;
+  margin:0;
+  background:linear-gradient(180deg,var(--bg),#eef3f7);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+
+.calculator{
+  width:320px;
+  background:var(--panel);
+  border-radius:var(--radius);
+  padding:18px;
+  box-shadow:var(--shadow);
+}
+
+.display{
+  width:100%;
+  height:56px;
+  border-radius:10px;
+  border:0;
+  padding:12px 14px;
+  font-size:1.4rem;
+  text-align:right;
+  background:#f6f8fa;
+  margin-bottom:14px;
+  color:#111827;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+}
+
+.buttons{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:10px;
+}
+
+button{
+  height:52px;
+  border-radius:10px;
+  border:0;
+  font-size:1.05rem;
+  cursor:pointer;
+  background:var(--btn);
+  transition:transform .08s ease, box-shadow .08s;
+  box-shadow: 0 2px 6px rgba(12,12,12,0.04);
+}
+
+button:active{ transform: translateY(1px); }
+
+button.operator{ background: var(--operator); }
+button.equal{ background: var(--accent); color:white; grid-column: span 1; }
+button.clear{ background: var(--danger); color:white; }
+button.wide{ grid-column: span 2; height:48px; }
+
+.equal{ background:var(--accent); color:#fff; }
+.back{ background:#9fc5e8; color:#073b5b; }
+
+@media (max-width:360px){
+  .calculator{ width:100%; }
+  .display{ font-size:1.2rem; height:48px; }
+  button{ height:48px; }
+}
